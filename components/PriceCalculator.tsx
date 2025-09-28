@@ -29,14 +29,14 @@ export default function PriceCalculator() {
             </p>
 
             <form onSubmit={handleFormSubmit}>
-                <div className="flex font-semibold items-center justify-between gap-2 text-[#6300A3]">
+                <label htmlFor="invites" className="flex font-semibold items-center justify-between gap-2 text-[#6300A3]">
                     <p className="text-sm">{"No. of Invites"}</p>
                     <p>{invites.toLocaleString()}</p>
-                </div>
+                </label>
                 <input
                     type="range"
-                    name="h-price"
-                    id="h-price"
+                    name="invites"
+                    id="invites"
                     min="1"
                     max="1000"
                     value={invites}
@@ -52,14 +52,14 @@ export default function PriceCalculator() {
                     <p>{"1,000"}</p>
                 </div>
 
-                <div className="flex font-semibold items-center justify-between gap-2 text-[#6300A3] mt-6">
+                <label htmlFor="duration" className="flex font-semibold items-center justify-between gap-2 text-[#6300A3] mt-6">
                     <p className="text-sm">{"Duration of Event"}</p>
                     <p>{eventDuration.toLocaleString()}{" hrs"}</p>
-                </div>
+                </label>
                 <input
                     type="range"
-                    name="h-price"
-                    id="h-price"
+                    name="duration"
+                    id="duration"
                     min="0.5"
                     max="8"
                     value={eventDuration}

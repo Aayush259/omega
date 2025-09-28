@@ -78,12 +78,13 @@ export default function Carousel({ setView360Open }: { setView360Open: React.Dis
                     />
                 ))}
 
-                <button className="z-10 absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-black/50 py-1.5 px-3 text-white text-sm rounded-lg hover:opacity-80" onClick={() => setView360Open(true)}>
+                <button className="z-10 absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-black/50 py-1.5 px-3 text-white text-sm rounded-lg hover:opacity-80" aria-label="View 360" onClick={() => setView360Open(true)}>
                     {"Click to view 360°"}
                 </button>
 
                 <button
                     className="w-9 h-10 absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 text-white z-10 pl-1 cursor-pointer hover:opacity-80"
+                    aria-label="Previous"
                     onClick={() => setActiveIdx((activeIdx - 1 + IMAGES_COUNT) % IMAGES_COUNT)}
                 >
                     <FaChevronLeft size={24} />
@@ -91,6 +92,7 @@ export default function Carousel({ setView360Open }: { setView360Open: React.Dis
 
                 <button
                     className="w-9 h-10 absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 text-white z-10 pr-1 cursor-pointer hover:opacity-80"
+                    aria-label="Next"
                     onClick={() => setActiveIdx((activeIdx + 1) % IMAGES_COUNT)}
                 >
                     <FaChevronRight size={24} className="ml-auto" />
@@ -125,6 +127,7 @@ export default function Carousel({ setView360Open }: { setView360Open: React.Dis
                 </div>
                 <button
                     className="h-[calc(100%-16px)] absolute left-0 top-2 bg-black/80 text-white z-10 p-1 cursor-pointer hover:opacity-80 rounded-l-xl"
+                    aria-label="Previous"
                     onClick={() => scrollThumbnails('left')}
                 >
                     <FaChevronLeft size={20} />
@@ -132,6 +135,7 @@ export default function Carousel({ setView360Open }: { setView360Open: React.Dis
 
                 <button
                     className="h-[calc(100%-16px)] absolute right-0 top-2 bg-black/80 text-white z-10 p-1 cursor-pointer hover:opacity-80 rounded-r-xl"
+                    aria-label="Next"
                     onClick={() => scrollThumbnails('right')}
                 >
                     <FaChevronRight size={20} className="ml-auto" />
